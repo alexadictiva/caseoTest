@@ -80,19 +80,33 @@ header {
 #dropdownButton {
   display: none;
 }
-.linkItem {
+.menuItem {
   height: 70px;
   display: flex;
   align-items: center;
   padding-left: 20px;
 }
-.linkItem a {
+.menuLink {
   color: black;
   font-size: 1.7rem;
   line-height: 2.2rem;
 }
+/*menu change when scrolling*/
 .change {
-  background-color: red !important;
+  background-color: #76a136 !important;
+}
+.changeSpan {
+  background-color: #ffffff;
+}
+
+.changeLink {
+  color: #ffffff !important;
+}
+.greenBg {
+  color: #76a136 !important;
+}
+.hover {
+  background-color: #ffffff;
 }
 /*main*/
 main {

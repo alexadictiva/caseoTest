@@ -2,6 +2,16 @@ dropdownButton = document.getElementById("dropdownButton");
 var span1 = document.getElementById("span1");
 var span2 = document.getElementById("span2");
 var span3 = document.getElementById("span3");
+var header = document.getElementById("header");
+var dropdownMenu = document.getElementById("dropdownMenu");
+var span1 = document.getElementById("span1");
+var span2 = document.getElementById("span2");
+var span3 = document.getElementById("span3");
+var menuLink = document.getElementById("menuLink");
+
+var menuLink1 = document.getElementById("menuLink1");
+var menuLink2 = document.getElementById("menuLink2");
+var menuLink3 = document.getElementById("menuLink3");
 
 function crossMenu() {
   if (dropdownButton.checked) {
@@ -15,27 +25,27 @@ function crossMenu() {
   }
 }
 
-/* window.onscroll = function (e) {
-  var element = document.getElementById("header");
-  var dropdownMenu = document.getElementById("dropdownMenu");
-  element.classList.add("change");
-  dropdownMenu.classList.add("change");
-}; */
-/* var y = window.scrollY;
-console.log(y);
-if (window.scrollY) {
-  window.scroll(0, 200);
-  var dropdownMenu = document.getElementById("dropdownMenu");
-  dropdownMenu.classList.add("change");
-}
- */
-
 window.onscroll = function () {
   console.log(window.scrollY);
-  var header = document.getElementById("header");
-  var dropdownMenu = document.getElementById("dropdownMenu");
+
   if (window.onscroll >= "200") {
     header.classList.add("change");
     dropdownMenu.classList.add("change");
+    span1.classList.add("changeSpan");
+    span2.classList.add("changeSpan");
+    span3.classList.add("changeSpan");
+    menuLink.classList.add("changeLink");
+    menuLink1.classList.add("changeLink");
+    menuLink2.classList.add("changeLink");
+    menuLink3.classList.add("changeLink");
   }
 };
+
+var menuItem = document.getElementById("menuItem");
+menuItem.addEventListener("mouseover", cambioCono);
+menuLink.addEventListener("mouseover", cambioCono);
+
+function cambioCono() {
+  menuItem.classList.add("hover");
+  menuLink.classList.add("greenBg");
+}
