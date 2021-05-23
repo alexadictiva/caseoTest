@@ -14,3 +14,10 @@ function crossMenu() {
     span3.classList.remove("span3");
   }
 }
+
+window.onscroll = function (e) {
+  var element = document.getElementById("header");
+  var dropdownMenu = document.getElementById("dropdownMenu");
+  element.classList.add("change");
+  dropdownMenu.classList.add("change");
+};
