@@ -9,6 +9,11 @@ var menuLink1 = document.getElementById("menuLink1");
 var menuLink2 = document.getElementById("menuLink2");
 var menuLink3 = document.getElementById("menuLink3");
 var menuItem = document.getElementById("menuItem");
+var c1 = document.getElementById("c1");
+var a1 = document.getElementById("a1");
+var s1 = document.getElementById("s1");
+var e1 = document.getElementById("e1");
+var o1 = document.getElementById("o1");
 
 function crossMenu() {
   if (dropdownButton.checked) {
@@ -23,7 +28,7 @@ function crossMenu() {
 }
 
 window.onscroll = function () {
-  console.log(window.scrollY);
+  /* console.log(window.scrollY); */
 
   if (window.onscroll >= "200") {
     header.classList.add("change");
@@ -35,5 +40,10 @@ window.onscroll = function () {
     menuLink1.classList.add("changeLink");
     menuLink2.classList.add("changeLink");
     menuLink3.classList.add("changeLink");
+    c1.setAttribute("src", "./assets/img/c1.svg");
+    a1.setAttribute("src", "./assets/img/a1.svg");
+    s1.setAttribute("src", "./assets/img/s1.svg");
+    e1.setAttribute("src", "./assets/img/e1.svg");
+    o1.setAttribute("src", "./assets/img/o1.svg");
   }
 };

@@ -35,6 +35,15 @@ header {
   padding-left: 15px;
   width: 50%;
 }
+img:first-child {
+  margin-right: -7px;
+}
+img:nth-child(2) {
+  margin-right: -5px;
+}
+img:last-child {
+  margin-left: -5px;
+}
 .navContainer {
   position: relative;
   padding: 0 15px 0 0;
@@ -88,6 +97,7 @@ header {
 }
 .menuItem:hover {
   background-color: #ffffff;
+
   transition: 0.3s;
 }
 .menuItem:hover > .menuLink {
@@ -114,4 +124,25 @@ header {
 /*main*/
 main {
   padding-top: 80px;
+}
+
+@media (min-width: 1024px) {
+  #dropdownButton,
+  label {
+    display: none;
+  }
+  .dropdownMenu {
+    position: static;
+    height: auto;
+  }
+  .dropdownMenu nav ul {
+    display: flex;
+  }
+  .menuItem {
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+  .menuItem:hover {
+    border-bottom: 3px solid #76a136;
+  }
 }
