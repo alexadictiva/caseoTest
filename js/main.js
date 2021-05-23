@@ -13,6 +13,8 @@ var menuLink1 = document.getElementById("menuLink1");
 var menuLink2 = document.getElementById("menuLink2");
 var menuLink3 = document.getElementById("menuLink3");
 
+var menuItem = document.getElementById("menuItem");
+
 function crossMenu() {
   if (dropdownButton.checked) {
     span1.classList.add("span1");
@@ -40,12 +42,3 @@ window.onscroll = function () {
     menuLink3.classList.add("changeLink");
   }
 };
-
-var menuItem = document.getElementById("menuItem");
-menuItem.addEventListener("mouseover", cambioCono);
-menuLink.addEventListener("mouseover", cambioCono);
-
-function cambioCono() {
-  menuItem.classList.add("hover");
-  menuLink.classList.add("greenBg");
-}
