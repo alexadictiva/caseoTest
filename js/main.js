@@ -15,9 +15,27 @@ function crossMenu() {
   }
 }
 
-window.onscroll = function (e) {
+/* window.onscroll = function (e) {
   var element = document.getElementById("header");
   var dropdownMenu = document.getElementById("dropdownMenu");
   element.classList.add("change");
   dropdownMenu.classList.add("change");
+}; */
+/* var y = window.scrollY;
+console.log(y);
+if (window.scrollY) {
+  window.scroll(0, 200);
+  var dropdownMenu = document.getElementById("dropdownMenu");
+  dropdownMenu.classList.add("change");
+}
+ */
+
+window.onscroll = function () {
+  console.log(window.scrollY);
+  var header = document.getElementById("header");
+  var dropdownMenu = document.getElementById("dropdownMenu");
+  if (window.onscroll >= "200") {
+    header.classList.add("change");
+    dropdownMenu.classList.add("change");
+  }
 };
