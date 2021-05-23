@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #eeeeee;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*Menu*/
+header {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brandContainer {
+  padding-left: 15px;
+}
+.navContainer {
+  position: relative;
+  padding: 0 15px 0 0;
+  width: 50%;
+}
+.buttonMenuContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.buttonMenuContainer label {
+  cursor: pointer;
+}
+.dropdownMenu {
+  background-color: white;
+  height: 100vh;
+  position: absolute;
+  left: 170px;
+  top: 49px;
+  transition-duration: 0.3s;
+}
+#dropdownButton:checked ~ .dropdownMenu {
+  left: 0;
+  right: 0;
+}
+.span {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 5px;
+  display: block;
+  transition-duration: 0.3s;
+}
+
+.span1 {
+  transform: rotate(45deg) translate(6px, 7px);
+}
+.span2 {
+  display: none;
+}
+.span3 {
+  transform: rotate(-45deg);
+}
+#dropdownButton {
+  display: none;
+}
+.linkItem {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.linkItem a {
+  color: black;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
