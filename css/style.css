@@ -88,9 +88,11 @@ header {
 }
 .menuItem:hover {
   background-color: #ffffff;
+  transition: 0.3s;
 }
 .menuItem:hover > .menuLink {
   color: #76a136;
+  transition: 0.3s;
 }
 .menuLink {
   color: black;
@@ -99,14 +101,14 @@ header {
 }
 /*menu change when scrolling*/
 .change {
-  background-color: #76a136 !important;
+  background-color: #76a136;
 }
 .changeSpan {
   background-color: #ffffff;
 }
 
 .changeLink {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /*main*/

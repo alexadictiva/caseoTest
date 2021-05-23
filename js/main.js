@@ -1,18 +1,13 @@
-dropdownButton = document.getElementById("dropdownButton");
+var dropdownButton = document.getElementById("dropdownButton");
 var span1 = document.getElementById("span1");
 var span2 = document.getElementById("span2");
 var span3 = document.getElementById("span3");
 var header = document.getElementById("header");
 var dropdownMenu = document.getElementById("dropdownMenu");
-var span1 = document.getElementById("span1");
-var span2 = document.getElementById("span2");
-var span3 = document.getElementById("span3");
 var menuLink = document.getElementById("menuLink");
-
 var menuLink1 = document.getElementById("menuLink1");
 var menuLink2 = document.getElementById("menuLink2");
 var menuLink3 = document.getElementById("menuLink3");
-
 var menuItem = document.getElementById("menuItem");
 
 function crossMenu() {
