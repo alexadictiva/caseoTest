@@ -1,148 +1,156 @@
 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth; /*revisar*/
 }
+
 body {
   overflow-x: hidden;
   font-family: sans-serif;
-  background-color: #eeeeee;
+  position: relative;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
-/*Menu*/
+
+/*HEADER*/
 header {
-  background-color: white;
+  background-color: #ffd213;
   width: 100%;
-  height: 80px;
+  height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 20;
 }
-.brandContainer {
-  padding-left: 15px;
+header .brand {
   width: 50%;
-}
-img:first-child {
-  margin-right: -7px;
-}
-img:nth-child(2) {
-  margin-right: -5px;
-}
-img:last-child {
-  margin-left: -5px;
-}
-.navContainer {
-  position: relative;
-  padding: 0 15px 0 0;
-  width: 50%;
-}
-.buttonMenuContainer {
   display: flex;
-  justify-content: flex-end;
+  padding-left: 20px;
+  position: relative;
+  z-index: 21;
 }
-.buttonMenuContainer label {
+header .menu {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10;
+}
+
+header .menu label {
+  padding: 0 30px;
   cursor: pointer;
 }
-.dropdownMenu {
-  background-color: white;
-  height: 100vh;
+
+header .menu .menuBotton {
+  display: none;
+}
+
+header .menu .navContainer {
   position: absolute;
-  left: 250px;
-  top: 49px;
-  transition-duration: 0.3s;
-}
-#dropdownButton:checked ~ .dropdownMenu {
-  left: 0;
-  right: 0;
-}
-.span {
-  width: 30px;
-  height: 4px;
-  background-color: #333333;
-  margin-bottom: 5px;
-  display: block;
-  transition-duration: 0.3s;
+  top: 60px;
+  right: -600px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-.span1 {
-  transform: rotate(45deg) translate(6px, 7px);
+header .menu .navContainer .menuContainer {
+  height: 100vh;
+  width: 50vw;
+  background-color: #ffd213;
 }
-.span2 {
-  display: none;
-}
-.span3 {
-  transform: rotate(-45deg);
-}
-#dropdownButton {
-  display: none;
-}
-.menuItem {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-.menuItem:hover {
-  background-color: #ffffff;
 
-  transition: 0.3s;
+header .menu .navContainer .menuContainer .menuDropdown {
+  height: 100vh;
+  color: #000000;
 }
-.menuItem:hover > .menuLink {
-  color: #76a136;
-  transition: 0.3s;
-}
-.menuLink {
-  color: black;
+
+header .menu .navContainer .menuContainer .menuDropdown .menuItem {
   font-size: 1.7rem;
-  line-height: 2.2rem;
-}
-/*menu change when scrolling*/
-.change {
-  background-color: #76a136;
-}
-.changeSpan {
-  background-color: #ffffff;
+  line-height: 7rem;
+  padding: 0 0 0 30px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.changeLink {
-  color: #ffffff;
+header .menu .navContainer .menuContainer .menuDropdown .menuItem .menuLink {
+  color: #000000;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .menu .navContainer .menuContainer .menuDropdown .menuItem:hover {
+  -webkit-box-shadow: 768px 0 8px #ffffff inset;
+  box-shadow: 768px 0 8px #ffffff inset;
+}
+
+header
+  .menu
+  .navContainer
+  .menuContainer
+  .menuDropdown
+  .menuItem:hover
+  > .menuLink {
+  color: #f4a727;
+}
+
+header .menu .menuBotton:checked ~ .navContainer {
+  right: 0;
 }
 
 /*main*/
 main {
-  padding-top: 80px;
+  padding-top: 59.5px;
+}
+main p {
+  margin-top: 40px;
+  padding: 0 20px;
+  font-size: 2rem;
+  line-height: 3.5rem;
 }
 
-@media (min-width: 1024px) {
-  #dropdownButton,
-  label {
+@media (min-width: 768px) {
+  .menu label {
     display: none;
   }
-  .dropdownMenu {
+  header .menu .navContainer {
     position: static;
-    height: auto;
+    top: 0;
   }
-  .dropdownMenu nav ul {
+  header .menu .navContainer .menuContainer .menuDropdown {
+    padding-right: 15px;
     display: flex;
+    justify-content: flex-end;
+    height: 60px;
   }
-  .menuItem {
-    padding: 0 5px;
-    margin: 0 10px;
+  header .menu .navContainer .menuContainer .menuDropdown .menuItem {
+    padding: 0 15px;
   }
-  .menuItem:hover {
-    border-bottom: 3px solid #76a136;
+  header .menu .navContainer .menuContainer {
+    height: 60px;
+    width: 100vw;
+    top: 0;
+    background: transparent;
   }
 }
